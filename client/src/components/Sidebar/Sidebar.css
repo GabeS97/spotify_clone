@@ -1,0 +1,54 @@
+.sidebar {
+  background-color: rgb(0, 0, 0);
+  flex: 0.15;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.sidebar__spacing {
+  padding: 2rem 1.5rem;
+  display: flex;
+  /* position: absolute; */
+}
+.logo {
+  height: 3rem;
+  object-fit: contain;
+}
+
+.function__icons {
+  display: flex;
+  position: relative;
+  position: row;
+  /* background-color: blue; */
+  height: 6rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  column-gap: 0.5rem;
+}
+
+.icon {
+  height: 2rem;
+}
+
+.icon__container {
+  display: flex;
+  align-items: center;
+  color: rgb(187, 187, 187);
+  column-gap: 0.75rem;
+  font-size: smaller;
+  
+  cursor: pointer;
+  width: fit-content;
+  /* padding: 2rem 2rem; */
+  /* position: absolute; */
+  background-color: black;
+}
+
+.function__title {
+  font-weight: 600;
+}
+
+.sidebar__home {
+}
