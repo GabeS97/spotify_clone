@@ -2,7 +2,11 @@ import React from 'react'
 import './Main.css'
 function Main() {
     return (
-        <div className='main'>Main</div>
+        <div className='main'>
+            {/* Header */}
+
+            {/* Content */}
+        </div>
     )
 }
 

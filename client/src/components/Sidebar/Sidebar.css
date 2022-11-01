@@ -28,7 +28,7 @@
   column-gap: 0.5rem;
 }
 
-.icon {
+.first_icon {
   height: 2rem;
 }
 
@@ -38,7 +38,7 @@
   color: rgb(187, 187, 187);
   column-gap: 0.75rem;
   font-size: smaller;
-  
+
   cursor: pointer;
   width: fit-content;
   /* padding: 2rem 2rem; */
@@ -49,6 +49,71 @@
 .function__title {
   font-weight: 600;
 }
+.create__like__container {
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 
-.sidebar__home {
+  width: 2rem;
+  height: 2rem;
+}
+
+.plus__container {
+  color: black;
+  background-color: rgb(187, 187, 187);
+}
+
+.heart__container {
+  background: linear-gradient(135deg, rgb(82, 44, 174), rgb(133, 152, 161));
+}
+.second__icon {
+  /* border: white solid 1px; */
+  position: absolute;
+  height: 2rem;
+  margin-left: 0.2rem;
+}
+
+.create__icon {
+  margin: auto;
+  /* background-color: rgb(187, 187, 187);
+  color: black; */
+  height: 1.5rem;
+}
+
+.liked__icon {
+  /* background: linear-gradient(135deg, rgb(82, 44, 174), rgb(133, 152, 161)); */
+  margin: auto;
+  height: 1.2rem;
+}
+
+.divider {
+  border-bottom: 2px solid rgb(40, 40, 40);
+  width: 14rem;
+  margin: 0 auto;
+}
+.sidebar__playlists {
+  display: flex;
+  text-indent: 1.75rem;
+  align-items: flex-start;
+  flex-direction: column;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.sidebar__playlists::-webkit-scrollbar {
+  /* width: 2em; */
+  background-color: black;
+  width: 0.6rem;
+}
+
+.sidebar__playlists::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: rgb(87, 87, 87);
+}
+
+.sidebar__playlists:hover::-webkit-scrollbar-thumb {
+  background-color: rgb(139, 139, 139);
 }
