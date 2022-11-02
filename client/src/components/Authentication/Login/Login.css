@@ -7,7 +7,6 @@
   top: 0.8rem;
   justify-content: center;
   align-content: center;
-  height: 6.5rem;
 }
 
 .login__logo {
@@ -22,6 +21,8 @@
   position: relative;
   bottom: 3rem;
   margin-top: 2.86rem;
+  top: 3.7rem;
+
 }
 
 .login__bottom {
