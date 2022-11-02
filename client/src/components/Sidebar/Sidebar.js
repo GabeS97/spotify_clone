@@ -11,6 +11,7 @@ function Sidebar() {
                     src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png"
                     alt="" />
             </div>
+            
             <div className='function__icons sidebar__spacing'>
                 <div className="sidebar__home icon__container">
                     <HomeIcon className='home__icon first_icon' />

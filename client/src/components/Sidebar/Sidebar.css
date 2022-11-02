@@ -18,8 +18,10 @@
 }
 
 .function__icons {
+  bottom: 2.6rem;
   display: flex;
   position: relative;
+  margin-bottom: 1;
   position: row;
   /* background-color: blue; */
   height: 6rem;
@@ -91,15 +93,26 @@
 .divider {
   border-bottom: 2px solid rgb(40, 40, 40);
   width: 14rem;
+  position: relative;
+  bottom: 3rem;
   margin: 0 auto;
+
 }
 .sidebar__playlists {
   display: flex;
+  position: relative;
+  bottom: 3rem;
   text-indent: 1.75rem;
   align-items: flex-start;
   flex-direction: column;
   overflow-y: scroll;
   width: 100%;
+  cursor: auto;
+}
+
+.sidebar__playlists > h3 {
+  cursor: default;
+  font-weight: 500;
 }
 
 .sidebar__playlists::-webkit-scrollbar {
