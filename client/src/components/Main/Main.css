@@ -1,4 +1,11 @@
+.main__body {
+  flex: 0.85;
+}
+
 .main {
   background: linear-gradient(rgb(93, 100, 7), rgb(18, 18, 18) 26%);
-  flex: 0.85;
+}
+
+.register__main {
+  background-color: rgb(18, 18, 18);
 }

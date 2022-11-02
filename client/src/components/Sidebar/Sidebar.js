@@ -3,6 +3,7 @@ import { HomeIcon, MagnifyingGlassIcon, BuildingLibraryIcon } from '@heroicons/r
 import { HeartIcon, PlusIcon } from '@heroicons/react/24/solid'
 import './Sidebar.css'
 function Sidebar() {
+    const user = null
     return (
         <div className='sidebar'>
             <div className='spotify__logo sidebar__spacing'>
@@ -11,7 +12,7 @@ function Sidebar() {
                     src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png"
                     alt="" />
             </div>
-            
+
             <div className='function__icons sidebar__spacing'>
                 <div className="sidebar__home icon__container">
                     <HomeIcon className='home__icon first_icon' />
@@ -45,61 +46,64 @@ function Sidebar() {
                 </div>
             </div>
 
-            <div className='divider' />
-
-            <div className='sidebar__playlists icon__container'>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-                <h3>Test</h3>
-            </div>
+            {user && (
+                <>
+                    <div className='divider' />
+                    <div className='sidebar__playlists icon__container'>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                        <h3>Test</h3>
+                    </div>
+                </>
+            )}
         </div>
     )
 }

@@ -1,0 +1,62 @@
+.header {
+  background-color: rgb(11, 11, 11);
+  width: 100%;
+  align-items: center;
+  height: 4.3rem;
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+}
+
+.header__arrows {
+  position: absolute;
+  padding: auto;
+  display: flex;
+  object-fit: contain;
+  column-gap: 2rem;
+  margin-left: 2rem;
+  height: 5.35rem;
+  width: 5.35rem;
+  color: rgb(169, 169, 169);
+}
+
+.arror__icon {
+  cursor: pointer;
+}
+
+.header__auth {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  column-gap: 2rem;
+  right: 2rem;
+}
+
+.header__auth > button {
+  outline: none;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: medium;
+}
+
+.header__signup {
+  color: rgb(167, 167, 167);
+  background-color: transparent;
+}
+
+.header__signup:hover {
+  color: white;
+  transition: all 0.5s;
+}
+.header__login:hover {
+  background-color: rgb(246, 246, 246);
+  transition: all 0.5s;
+}
+.header__login {
+  background-color: rgb(255, 255, 255);
+  height: 3rem;
+  border-radius: 50px;
+  width: 7rem;
+}
