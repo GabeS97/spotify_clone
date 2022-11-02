@@ -1,0 +1,138 @@
+.login {
+}
+
+.login__spacing {
+  position: relative;
+  display: flex;
+  top: 0.8rem;
+  justify-content: center;
+  align-content: center;
+  height: 6.5rem;
+}
+
+.login__logo {
+  margin: auto;
+  position: absolute;
+  height: 3.75rem;
+}
+
+.divider {
+  border-bottom: 2px solid rgb(217, 218, 220);
+  width: 100%;
+  position: relative;
+  bottom: 3rem;
+  margin-top: 2.86rem;
+}
+
+.login__bottom {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  flex-direction: column;
+  width: 25%;
+  justify-content: flex-start;
+  height: 100vh;
+  margin-top: 1rem;
+}
+
+.login__socials {
+  margin-top: 4rem;
+  position: relative;
+}
+
+.login__message {
+  font-weight: bolder;
+}
+.login__options {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.login__options > button {
+  /* background-color: transparent; */
+  outline: none;
+  font-weight: bolder;
+  height: 3rem;
+  text-transform: uppercase;
+  border-radius: 25px;
+}
+
+.facebook__login {
+  background-color: rgb(58, 89, 152);
+  color: white;
+}
+.apple__login {
+  background-color: rgb(26, 26, 26);
+  color: white;
+}
+
+.google__login {
+  background-color: transparent;
+}
+.social__logo {
+  height: 20px;
+}
+.login__social {
+  border: solid 1px rgb(151, 151, 151);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  column-gap: 0.5rem;
+}
+
+.divider__or {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  justify-content: center;
+}
+
+.divider__or > p {
+  font-weight: 600;
+  font-size: small;
+}
+.divider__sides {
+  border-bottom: 2px solid rgb(217, 218, 220);
+  /* width: 100%; */
+  position: absolute;
+  width: 45%;
+}
+
+.divider__left {
+  left: 0rem;
+}
+.divider__right {
+  right: 0rem;
+}
+
+.login__auth {
+    row-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth__container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.auth__label {
+    font-weight: bold;
+    font-size: small;
+}
+
+.auth__input {
+  width: 100%;
+  margin-top: .5rem;
+  height: 3rem;
+}
+
+.auth__input::placeholder {
+    font-weight: bolder;
+    text-indent: .6rem;
+}
