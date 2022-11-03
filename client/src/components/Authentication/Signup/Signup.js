@@ -1,6 +1,20 @@
 import React from 'react'
 import './Signup.css'
 function Signup() {
+    const months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+    ]
     return (
         <div className='signup'>
             <header className="signup__top signup__spacing">
@@ -74,8 +88,54 @@ function Signup() {
                                 placeholder='Enter a profile name.'
                                 className='username auth__input'
                                 type="password" />
+                            <p>This appears on your profile </p>
+                        </div>
+
+                        <div className="auth__container">
+                            <label htmlFor="dob">What's your date birth?</label>
+                            <div className="dob__container">
+                                <div className='dob__fields'>
+                                    <select className='dob__field  month__sizing' >
+
+                                        <option value="" disabled >Month</option>
+                                        {months.map((month, idx) => (
+                                            <option value="" id={idx}>{month}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div className='dob__fields'>
+                                    <input type="text" placeholder='DD' className='dob__field day__sizing' />
+                                </div>
+
+                                <div className='dob__fields'>
+                                    <input type="text" placeholder='YYYY' className='dob__field year__sizing' />
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div className="auth__container gender__container">
+                            <label htmlFor="gender">What's your gender?</label>
+
+                            <div className="gender__options">
+                                <div className="gender__option">
+                                    <input type="radio" className='' />
+                                    <p>Male</p>
+                                </div>
+
+                                <div className="gender__option">
+                                    <input type="radio" className='' />
+                                    <p>Female</p>
+                                </div>
+                            </div>
                         </div>
                     </form>
+
+                    <button className="signup__submit">
+                        Sign up
+                    </button>
+
+                    <p className='signup__login'>Have an account? <span>Log in.</span></p>
                 </div>
             </main>
         </div>
