@@ -122,5 +122,6 @@
 }
 .signup__login > span {
   color: rgb(35, 186, 87);
+  cursor: pointer;
   text-decoration: underline;
 }

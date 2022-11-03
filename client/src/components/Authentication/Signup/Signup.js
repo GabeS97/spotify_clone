@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Signup.css'
 function Signup() {
+    const navigate = useNavigate();
     const months = [
         'January',
         'February',
@@ -135,7 +137,7 @@ function Signup() {
                         Sign up
                     </button>
 
-                    <p className='signup__login'>Have an account? <span>Log in.</span></p>
+                    <p className='signup__login'>Have an account? <span onClick={() => navigate('/login')}>Log in.</span></p>
                 </div>
             </main>
         </div>
