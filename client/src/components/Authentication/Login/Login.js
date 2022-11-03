@@ -51,22 +51,25 @@ function Login() {
                 </div>
 
                 <div className="login__auth">
+                    <form>
+                        <div className="auth__container">
+                            <label htmlFor='email' className='auth__label'>Email address or username</label>
+                            <input
+                                type='text'
+                                className='email auth__input'
+                                placeholder='Email address or username'
+                            />
+                        </div>
 
-                    <div className="auth__container">
-                        <label htmlFor='email' className='auth__label'>Email address or username</label>
-                        <input
-                            className='email auth__input'
-                            placeholder='Email address or username'
-                        />
-                    </div>
-
-                    <div className="auth__container">
-                        <label htmlFor='password' className='auth__label'>Password</label>
-                        <input
-                            className='password auth__input'
-                            placeholder='Password'
-                        />
-                    </div>
+                        <div className="auth__container">
+                            <label htmlFor='password' className='auth__label'>Password</label>
+                            <input
+                                type='password'
+                                className='password auth__input'
+                                placeholder='Password'
+                            />
+                        </div>
+                    </form>
                 </div>
             </main>
         </div>

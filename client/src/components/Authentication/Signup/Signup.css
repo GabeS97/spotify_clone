@@ -1,0 +1,49 @@
+.signup__spacing {
+  position: relative;
+  display: flex;
+  top: 1rem;
+  justify-content: center;
+  align-content: center;
+}
+
+.signup__logo {
+  top: 1rem;
+  margin: auto;
+  position: absolute;
+  height: 2.75rem;
+}
+
+.signup__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.signup__socials > h1 {
+  font-weight: 750;
+}
+
+.signup__options {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.signup__options > button {
+  /* background-color: transparent; */
+  outline: none;
+  font-weight: bolder;
+  height: 3rem;
+  text-transform: uppercase;
+  border-radius: 25px;
+}
+
+.signup__auth > form  {
+    row-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}

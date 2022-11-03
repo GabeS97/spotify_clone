@@ -110,10 +110,10 @@
   right: 0rem;
 }
 
-.login__auth {
-    row-gap: 1rem;
-    display: flex;
-    flex-direction: column;
+.login__auth > form {
+  row-gap: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .auth__container {
