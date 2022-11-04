@@ -7,3 +7,5 @@ auth = Blueprint('auth', __name__)
 def get_user():
     users = User.query.all()
     return { 'users': [user.to_dict() for user in users]}
+
+    
