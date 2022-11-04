@@ -1,10 +1,16 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Login.css'
 function Login() {
+    const navigate = useNavigate();
+
+    const goHome = () => navigate('/')
+    const goSignup = () => navigate('/signup')
     return (
         <div className='login'>
             <header className="login__top login__spacing">
                 <img
+                    onClick={goHome}
                     className='login__logo'
                     src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Black.png"
                     alt="" />
@@ -70,6 +76,18 @@ function Login() {
                             />
                         </div>
                     </form>
+
+                    <button className='login__submit'>
+                        Log in
+                    </button>
+
+                    <div className="divider divider__bottom" />
+
+                    <div className="login__signup">
+                        <h2>Don't have an account?</h2>
+                        <button onClick={goSignup}>Sign up for spotify</button>
+
+                    </div>
                 </div>
             </main>
         </div>

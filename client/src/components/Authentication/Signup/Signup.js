@@ -17,10 +17,14 @@ function Signup() {
         'November',
         'December'
     ]
+
+    const goHome = () => navigate('/')
+    const goLogin = () => navigate('/login')
     return (
         <div className='signup'>
             <header className="signup__top signup__spacing">
                 <img
+                    onClick={goHome}
                     className='signup__logo'
                     src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Black.png"
                     alt="" />
@@ -137,7 +141,7 @@ function Signup() {
                         Sign up
                     </button>
 
-                    <p className='signup__login'>Have an account? <span onClick={() => navigate('/login')}>Log in.</span></p>
+                    <p className='signup__login'>Have an account? <span onClick={goLogin}>Log in.</span></p>
                 </div>
             </main>
         </div>

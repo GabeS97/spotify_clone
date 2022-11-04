@@ -22,7 +22,6 @@
   bottom: 3rem;
   margin-top: 2.86rem;
   top: 3.7rem;
-
 }
 
 .login__bottom {
@@ -114,6 +113,7 @@
   row-gap: 1rem;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .auth__container {
@@ -123,17 +123,57 @@
 }
 
 .auth__label {
-    font-weight: bold;
-    font-size: small;
+  font-weight: bold;
+  font-size: small;
 }
 
 .auth__input {
   width: 100%;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   height: 3rem;
 }
 
 .auth__input::placeholder {
-    font-weight: bolder;
-    text-indent: .6rem;
+  font-weight: bolder;
+  text-indent: 0.6rem;
+}
+
+.login__submit {
+  background-color: rgb(30, 215, 96);
+  outline: none;
+  border: none;
+  height: 3rem;
+  position: relative;
+  width: 8rem;
+  font-size: medium;
+  font-weight: bolder;
+  cursor: pointer;
+  margin-top: 1rem;
+  border-radius: 25px;
+  /* margin-left: 18rem; */
+}
+
+.divider__bottom {
+  margin-top: -2rem;
+}
+
+.login__signup {
+  position: relative;
+  margin-top: 5rem;
+}
+
+.login__signup > h2 {
+  font-size: large;
+}
+
+.login__signup > button {
+  background-color: transparent;
+  border: rgb(135, 135, 135) 1px solid;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-size: medium;
+  font-weight: 800;
+  color: rgb(106, 106, 106);
 }
