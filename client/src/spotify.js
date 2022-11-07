@@ -29,5 +29,3 @@ const queryParamsString = new URLSearchParams(params).toString();
 
 export const AUTH_URL =
     'https://accounts.spotify.com/authorize?' + queryParamsString
-
-

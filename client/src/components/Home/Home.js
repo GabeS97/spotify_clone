@@ -3,11 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import Main from '../Main/Main'
 import Sidebar from '../Sidebar/Sidebar'
 import './Home.css'
-function Home() {
-    const navigate = useNavigate();
-    const [test, setTest] = useState();
+import useAuth from '../../useAuth'
 
-    const user = null;
+function Home({ code }) {
+    const navigate = useNavigate();
+    const accessToken = useAuth(code)
+
     return (
         <div className='home'>
             {/* Sidebar */}
@@ -16,7 +17,7 @@ function Home() {
             <Main />
             {/* MusicPlayer */}
 
-            {!user ? (
+            {!code ? (
                 <footer className='auth__footer'>
                     <button
                         onClick={() => navigate('/signup')}
