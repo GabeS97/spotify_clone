@@ -1,11 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { AUTH_URL } from '../../../spotify';
 import './Login.css'
+
 function Login() {
     const navigate = useNavigate();
 
     const goHome = () => navigate('/')
     const goSignup = () => navigate('/signup')
+
+    const [token, setToken] = useState('')
+
+    useEffect(() => {
+        const hash = window.location.hash
+        let token = window.localStorage.getItem('token')
+
+        console.log(token)
+
+        if (token && hash) {
+            token = hash.substring(1).split('&').find(el => el.startsWith('access_token')).split('=')(1)
+
+            window.location.hash = '';
+            window.localStorage.setItem('token', token)
+            setToken(token)
+        }
+    }, [])
+
+
     return (
         <div className='login'>
             <header className="login__top login__spacing">
@@ -47,17 +68,37 @@ function Login() {
                                 Continue with google
                             </p>
                         </button>
+
+                        <div className='divider__or'>
+                            <div className='divider__sides divider__left'></div>
+                            <p>or</p>
+                            <div className='divider__sides divider__right'></div>
+                        </div>
+
+                        <a
+                            href={AUTH_URL}
+                            className='login__social spotify__login login__social__link'>
+                            <button className='login__social spotify__login'>
+                                <img
+                                    className='social__logo'
+                                    src="https://cdn-icons-png.flaticon.com/512/87/87409.png"
+                                    alt="" />
+                                <p>
+                                    Continue with Spotify
+                                </p>
+                            </button>
+                        </a>
                     </div>
 
-                    <div className='divider__or'>
+                    {/* <div className='divider__or'>
                         <div className='divider__sides divider__left'></div>
                         <p>or</p>
                         <div className='divider__sides divider__right'></div>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="login__auth">
-                    <form>
+                    {/* <form>
                         <div className="auth__container">
                             <label htmlFor='email' className='auth__label'>Email address or username</label>
                             <input
@@ -79,7 +120,9 @@ function Login() {
 
                     <button className='login__submit'>
                         Log in
-                    </button>
+                    </button> */}
+
+
 
                     <div className="divider divider__bottom" />
 

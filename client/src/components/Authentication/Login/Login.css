@@ -59,6 +59,27 @@
   border-radius: 25px;
 }
 
+.login__social__link {
+  /* background-color: transparent; */
+  outline: none;
+  font-weight: bolder;
+  height: 3rem;
+  text-transform: uppercase;
+  border-radius: 25px;
+  text-decoration: none;
+
+}
+
+.login__social__link > button {
+  outline: none;
+  font-weight: bolder;
+  height: 3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 25px;
+}
 .facebook__login {
   background-color: rgb(58, 89, 152);
   color: white;
@@ -70,6 +91,10 @@
 
 .google__login {
   background-color: transparent;
+}
+
+.spotify__login {
+  background-color: rgb(30, 215, 96);
 }
 .social__logo {
   height: 20px;
