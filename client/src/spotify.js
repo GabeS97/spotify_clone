@@ -19,7 +19,7 @@ const scopes = [
 const params = {
     scopes,
     client_id: 'a41776d974e54f5caae0beb00d00e4b2',
-    response_type: 'code',
+    response_type: 'token',
     redirect_uri: "http://localhost:3000",
 
 }

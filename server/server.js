@@ -1,60 +1,43 @@
 const express = require('express');
-const SpotifyWebApi = require('spotify-web-api-node');
-const cors = require('cors')
-const bodyParser = require('body-parser')
-require('dotenv').config()
-
+require('dotenv').config();
 const app = express();
-app.use(cors())
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
 
 
+app.get('/login', (req, res) => {
+    const state = process.env.STATE
+    const scopes = [
+        "user-read-email",
+        "playlist-read-private",
+        "playlist-read-collaborative",
+        "user-read-email",
+        "streaming",
+        "user-read-private",
+        "user-library-read",
+        // "user-library-modify",
+        "user-top-read",
+        "user-read-playback-state",
+        "user-modify-playback-state",
+        "user-read-currently-playing",
+        "user-read-recently-played",
+        "user-follow-read",
+        'user-read-private',
+        'user-read-email'
+    ].join(',')
 
-app.post("/refresh", (req, res) => {
-    const refreshToken = req.body.refreshToken
-    const spotifyApi = new SpotifyWebApi({
-        redirectUri: process.env.REDIRECT_URI,
-        clientId: process.env.CLIENT_ID,
-        clientSecret: process.env.CLIENT_SECRET,
-        refreshToken,
+    const params = new URLSearchParams({
+        response_type: 'code',
+        client_id: process.env.CLIENT_ID,
+        scope: scopes,
+        redirect_uri: process.env.REDIRECT_URI,
+        state: state
     })
 
-    spotifyApi
-        .refreshAccessToken()
-        .then(data => {
-            res.json({
-                accessToken: data.body.accessToken,
-                expiresIn: data.body.expiresIn,
-            })
-        })
-        .catch(err => {
-            console.log(err)
-            res.sendStatus(400)
-        })
+    res.redirect('https://accounts.spotify.com/authorize?' + params)
 })
 
-app.post("/login", (req, res) => {
-    const code = req.body.code
-    const spotifyApi = new SpotifyWebApi({
-        redirectUri: process.env.REDIRECT_URI,
-        clientId: process.env.CLIENT_ID,
-        clientSecret: process.env.CLIENT_SECRET,
-    })
 
-    spotifyApi
-        .authorizationCodeGrant(code)
-        .then(data => {
-            res.json({
-                accessToken: data.body.access_token,
-                refreshToken: data.body.refresh_token,
-                expiresIn: data.body.expires_in,
-            })
-        })
-        .catch(err => {
-            res.sendStatus(400)
-        })
+app.get('/callback', (req, res) => {
+    console.log(req.query.code)
 })
-
 
 app.listen(3001)

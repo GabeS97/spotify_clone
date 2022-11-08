@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AUTH_URL } from '../../../spotify';
 import './Login.css'
@@ -8,6 +8,23 @@ function Login() {
 
     const goHome = () => navigate('/')
     const goSignup = () => navigate('/signup')
+
+    const [token, setToken] = useState('')
+
+    useEffect(() => {
+        const hash = window.location.hash
+        let token = window.localStorage.getItem('token')
+
+        console.log(token)
+
+        if (token && hash) {
+            token = hash.substring(1).split('&').find(el => el.startsWith('access_token')).split('=')(1)
+
+            window.location.hash = '';
+            window.localStorage.setItem('token', token)
+            setToken(token)
+        }
+    }, [])
 
 
     return (
@@ -59,8 +76,8 @@ function Login() {
                         </div>
 
                         <a
-                        href={AUTH_URL}
-                        className='login__social spotify__login login__social__link'>
+                            href={AUTH_URL}
+                            className='login__social spotify__login login__social__link'>
                             <button className='login__social spotify__login'>
                                 <img
                                     className='social__logo'

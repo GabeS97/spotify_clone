@@ -3,12 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import Main from '../Main/Main'
 import Sidebar from '../Sidebar/Sidebar'
 import './Home.css'
-import useAuth from '../../useAuth'
 
-function Home({ code }) {
+
+function Home() {
     const navigate = useNavigate();
-    const accessToken = useAuth(code)
-
+    const code = null
     return (
         <div className='home'>
             {/* Sidebar */}
